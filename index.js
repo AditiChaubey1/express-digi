@@ -1,8 +1,9 @@
+import "dotenv/config";  // Correct way for ES Modules
+
 import express from 'express'
 
-
 const app = express()
-const port = 4000
+const port = process.env.PORT || 4000
 app.use(express.json())
 
 let teaData = []
